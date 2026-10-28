@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcesoft Music Studio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-logo">M</div>
+          <div>
+            <h1>Marcesoft Music Studio</h1>
+            <small>Final HTML version</small>
+          </div>
+        </div>
+
+        <div class="transport">
+          <button id="playBtn" class="btn primary">Play</button>
+          <button id="stopBtn" class="btn dark">Stop</button>
+
+          <label class="tempo-control">
+            <span>Tempo</span>
+            <input id="tempo" type="range" min="60" max="180" value="110" />
+            <strong id="tempoValue">110 BPM</strong>
+          </label>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <aside class="sidebar">
+          <section class="panel">
+            <h3>Adicionar faixa</h3>
+            <div class="track-form">
+              <input id="trackName" type="text" placeholder="Nome da faixa" value="Bass" />
+              <select id="trackType">
+                <option value="kick">Kick</option>
+                <option value="snare">Snare</option>
+                <option value="hihat">Hi-Hat</option>
+                <option value="bass">Bass</option>
+                <option value="lead">Lead</option>
+                <option value="pad">Pad</option>
+              </select>
+              <input id="trackColor" type="color" value="#ff7b2c" />
+              <button id="addTrackBtn" class="btn primary">Adicionar faixa</button>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h3>Faixas</h3>
+            <div id="trackList" class="track-list"></div>
+          </section>
+        </aside>
+
+        <main class="main-panel">
+          <section class="panel">
+            <div class="panel-header">
+              <h3>Pattern Editor</h3>
+              <div class="panel-actions">
+                <button id="randomBtn" class="btn dark small">Random</button>
+                <button id="clearBtn" class="btn dark small">Limpar</button>
+              </div>
+            </div>
+
+            <div class="pattern-wrap">
+              <div id="patternGrid" class="pattern-grid"></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h3>Mixer</h3>
+            <div id="mixer" class="mixer"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
